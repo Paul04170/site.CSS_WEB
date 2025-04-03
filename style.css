@@ -53,7 +53,6 @@ body {
 .hero__title {
     font-size: 2rem;
     font-weight: bold;
-    
 }
 
 .hero__subtitle {
@@ -62,10 +61,11 @@ body {
 
 /* Main Content */
 .main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
+    text-align: center;
     background: white;
-    padding: 20px;
+    padding: 60px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,16 +97,47 @@ body {
     gap: 20px;
 }
 
+/* Stilizare articole recomandate */
 .related__item {
-    background: #222;
-    padding: 20px;
     width: 30%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Imagini de fundal pentru articole recomandate */
+.related__item:nth-child(1) {
+    background-image: url('img1.png')
+}
+
+.related__item:nth-child(2) {
+    background-image: url('img2.png')
+}
+
+.related__item:nth-child(3) {
+    background-image: url('img3.jpeg')
 }
 
 .item__title {
+    background: rgba(0, 0, 0, 0.6);
     color: white;
+    padding: 10px;
+    border-radius: 3px;
+    width: 90%;
 }
 
+.related__item:hover {
+    transform: scale(1.05);
+}
+
+/* Buton pentru toate articolele */
 .related__action {
     display: inline-block;
     margin-top: 20px;
@@ -115,6 +146,11 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.related__action:hover {
+    background: #0056b3;
 }
 
 /* Footer */
@@ -143,4 +179,9 @@ body {
 .menu__link {
     color: white;
     text-decoration: none;
+}
+
+.menu__link:hover {
+    color: #007bff;
+    text-decoration: underline;
 }
