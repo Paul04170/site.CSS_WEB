@@ -45,15 +45,15 @@ body {
 .nav__link::after {
     content: "|";
     margin-left: 10px;
-    color: #ccc; /* poți schimba culoarea separatorului */
+    color: #ccc; 
 }
 
-/* Elimină separatorul de la ultimul link */
+
 .nav__wrapper li:last-child .nav__link::after {
     content: "";
 }
 
-/* Hero Section */
+
 .hero {
     background: url('https://www.bigbearbikes.co.uk//content/news/comfort+blog+main+image+1200+x+400.jpg_38cccba653b1ba28b1cef20803843f38.jpg') no-repeat center/cover;
     height: 500px;
@@ -64,10 +64,8 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .hero__wrapper {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-  }
+  
+  
 
 
 .hero__title {
@@ -94,8 +92,7 @@ body {
     margin: 0;
     text-align: center;
     background: white;
-   /* padding: 60px 20px;*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 .article__wrapper {
@@ -176,14 +173,14 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #007bff;
+    background: #0c0c0c;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .related__action:hover {
-    background: #0056b3;
+    background: #3f3b3b;
 }
 
 /* Footer */
@@ -194,10 +191,15 @@ body {
     padding: 20px;
 }
 
-.footer__logo img {
-    max-width: 120px;
-}
-
+.footer__logo {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__logo img {
+    justify-content:center;
+    max-height: 60px;
+    margin-bottom: 70px;
+  }
 .footer__menu {
     margin: 20px 0;
 }
