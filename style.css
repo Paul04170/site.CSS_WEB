@@ -56,7 +56,7 @@ body {
 /* Hero Section */
 .hero {
     background: url('https://www.bigbearbikes.co.uk//content/news/comfort+blog+main+image+1200+x+400.jpg_38cccba653b1ba28b1cef20803843f38.jpg') no-repeat center/cover;
-    height: 400px;
+    height: 500px;
     position: relative;
     color: white;
     text-align: center;
@@ -94,7 +94,7 @@ body {
     margin: 0;
     text-align: center;
     background: white;
-    padding: 60px 20px;
+   /* padding: 60px 20px;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
