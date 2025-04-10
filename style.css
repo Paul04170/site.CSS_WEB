@@ -18,7 +18,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
+
 
 .logo img {
     max-width: 150px;
@@ -28,6 +30,10 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav__link {
@@ -36,23 +42,46 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+.nav__link::after {
+    content: "|";
+    margin-left: 10px;
+    color: #ccc; /* poți schimba culoarea separatorului */
+}
 
-.nav__link--active {
-    border-bottom: 2px solid #007bff;
+/* Elimină separatorul de la ultimul link */
+.nav__wrapper li:last-child .nav__link::after {
+    content: "";
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    text-align: center;
-    color: rgb(253, 251, 251);
     background: url('https://www.bigbearbikes.co.uk//content/news/comfort+blog+main+image+1200+x+400.jpg_38cccba653b1ba28b1cef20803843f38.jpg') no-repeat center/cover;
-    padding: 100px 20px;
-}
+    height: 400px;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+  }
+
 
 .hero__title {
     font-size: 2rem;/*32px*/
     font-weight: bold;
+}
+.hero h1::after {
+    content: "";
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 14px;
 }
 
 .hero__subtitle {
@@ -61,13 +90,19 @@ body {
 
 /* Main Content */
 .main {
-    max-width: 1000px;
-    margin: auto;
+    width: 100%;
+    margin: 0;
     text-align: center;
     background: white;
-    padding: 60px 0;
+    padding: 60px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.article__wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
 
 .article__wrapper img {
     max-width: 100%;
@@ -79,7 +114,6 @@ body {
     font-style: italic;
     margin: 20px;
     padding-left: 20px;
-    border-left: 3px solid #007bff;
 }
 
 /* Related Articles */
